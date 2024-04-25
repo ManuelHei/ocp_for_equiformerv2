@@ -327,6 +327,8 @@ def setup_imports(config: Optional[dict] = None):
         if not skip_experimental_imports:
             setup_experimental_imports(project_root)
     finally:
+        import nets
+        import oc20.trainer
         registry.register("imports_setup", True)
 
 
